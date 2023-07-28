@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -23,6 +26,7 @@ nav {
 }
 nav p {
   padding: .5rem;
+  font-size: .5rem;
 }
 nav p:active {
   color: black;
@@ -36,7 +40,7 @@ nav p:hover {
 }
 .html-input,.css-input,.js-input,.result-iframe {
   width: 100%;
-  font-size: .85rem;
+  font-size: .6rem;
   resize: vertical;
   min-height: 30rem;
   outline: none;
@@ -44,6 +48,7 @@ nav p:hover {
   padding-top: 1rem;
   padding-inline-start: 1rem;
   line-height: 1.1;
+  font-family: roboto;
 }
 .css-input,.js-input,.result-output {
   display: none;

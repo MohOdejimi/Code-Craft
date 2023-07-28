@@ -9,6 +9,9 @@ const jsInput = document.querySelector('.js-input');
 const resultIframe = document.querySelector('.result-iframe');
 const output = document.querySelector('.result-output')
 
+
+
+
 function renderOutput() {
   const htmlContent = htmlInput.value
   const cssContent = cssInput.value 
@@ -24,7 +27,7 @@ function renderOutput() {
     </body>
   </html> `
   
-  resultIframe.srcdoc = iframeContent
+   resultIframe.srcdoc = iframeContent
   
 }
 html.addEventListener('click', renderOutput)
@@ -66,3 +69,50 @@ result.addEventListener('click', () => {
   jsInput.style.display = 'none'
   output.style.display = 'block'
 })
+
+
+htmlInput.addEventListener('input', () => {
+  const htmlContent = htmlInput.value
+  localStorage.setItem('htmlContent', htmlContent)
+})
+window.addEventListener('load', () => {
+  const savedHtmlContent = localStorage.getItem('htmlContent');
+  if (savedHtmlContent) {
+    htmlInput.value = savedHtmlContent;
+  }
+}); 
+
+cssInput.addEventListener('input', () => {
+  const cssContent = cssInput.value
+  localStorage.setItem('cssContent', cssContent)
+})
+window.addEventListener('load', () => {
+  const savedCssContent = localStorage.getItem('cssContent');
+  if (savedCssContent) {
+    cssInput.value = savedCssContent;
+  }
+});
+
+jsInput.addEventListener('input', () => {
+  const jsContent = jsInput.value
+  localStorage.setItem('jsContent', jsContent)
+})
+window.addEventListener('load', () => {
+  const savedjsContent = localStorage.getItem('jsContent');
+  if (savedjsContent) {
+    jsInput.value = savedjsContent;
+  }
+});
+
+htmlInput.addEventListener('input', () => {
+  const htmlContent = htmlInput.value
+  localStorage.setItem('htmlContent', htmlContent)
+})
+window.addEventListener('load', () => {
+  const savedHtmlContent = localStorage.getItem('htmlContent');
+  if (savedHtmlContent) {
+    htmlInput.value = savedHtmlContent;
+  }
+});
+
+
